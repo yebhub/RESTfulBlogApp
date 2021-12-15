@@ -5,6 +5,9 @@ express          = require("express"),
 mongoose         = require("mongoose"),
 app              = express();
 
+const rookout    = require('rookout')
+rookout.start({
+token: '39f9c31f8ea68895e6351e3920ca0d23cbb6bb28fc6c4648a80e882010799eec',labels: {env: 'dev'}})
 
 mongoose.connect('mongodb://localhost:27017/blog_app', { useNewUrlParser: true });
 app.set("view engine", "ejs");
